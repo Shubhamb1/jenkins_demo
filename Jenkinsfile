@@ -40,7 +40,7 @@ pipeline {
                             }
                         }
                         steps{
-                            'Running the Intergration Test...'
+                           echo 'Running the Intergration Test...'
                         }
                     }
             }
