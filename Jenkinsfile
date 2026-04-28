@@ -47,13 +47,10 @@ pipeline {
                         }
                     }
                     steps {
-                        script
-                            {
-                                docker.image('ubuntu').inside('-w /workspace -v /mnt/c/ProgramData/Jenkins/.jenkins/workspace:/workspace')
                                 echo 'Running the Integration Test...'
-                            }
+                           
+                          }
                     }
-                }
 
             }
         }
