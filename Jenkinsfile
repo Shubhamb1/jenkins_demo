@@ -40,7 +40,6 @@ pipeline {
                         docker {
                              image 'ubuntu'
                              reuseNode false
-                             args '-w /workspace'
                         }
                     }
                     steps {
