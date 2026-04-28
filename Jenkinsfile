@@ -38,6 +38,7 @@ pipeline {
                 stage('Integration Test') {
                     agent {
                         docker {
+                             args '-w /workspace'
                              image 'ubuntu'
                              reuseNode false
                         }
