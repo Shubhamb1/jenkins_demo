@@ -38,9 +38,12 @@ pipeline {
                 stage('Integration Test') {
                     agent {
                         docker {
-                             args '-w /workspace'
                              image 'ubuntu'
                              reuseNode false
+                             args '''
+                                -v /mnt/c/ProgramData/Jenkins/.jenkins/workspace:/workspace
+                                -w /workspace
+                             '''
                         }
                     }
                     steps {
