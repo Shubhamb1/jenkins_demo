@@ -38,13 +38,14 @@ pipeline {
                 stage('Integration Test') {
                     agent {
                         docker {
-                              image 'ubuntu'
-                              reuseNode false
-                              args '-w /workspace'
+                            image 'ubuntu'
+                            reuseNode false
+                            args '-v /mnt/c/ProgramData/Jenkins/.jenkins/workspace:/workspace -w /workspace'
                         }
                     }
                     steps {
-                         sh 'echo Running the Integration Test...'
+                        sh 'echo Running the Integration Test...'
+                        sh 'pwd'
                     }
                 }
 
