@@ -47,7 +47,7 @@ pipeline {
                         }
                     }
                     steps {
-                        sh 'echo Running the Integration Test...'
+                        echo 'Running the Integration Test...'
                     }
                 }
 
